@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "jon" | github.sh
+printf "jon" | github.sh
 git add .
 fecha=`date`
 git commit -m "commit $fecha"
