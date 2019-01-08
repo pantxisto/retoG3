@@ -2,4 +2,4 @@
 git add .
 fecha=`date`
 git commit -m "commit $fecha"
-git push = 'pantxisto'
+git push | echo "pantxisto"
