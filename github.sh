@@ -2,6 +2,7 @@
 git add .
 fecha=`date`
 git commit -m "commit $fecha"
-sleep 3s
+git push
+sleep 4s
 echo "pantxisto"
 
