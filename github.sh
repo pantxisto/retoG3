@@ -4,3 +4,4 @@ fecha=`date`
 git commit -m "commit $fecha"
 git push
 echo "prueba"
+sleep 3s
