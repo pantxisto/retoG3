@@ -2,6 +2,7 @@
 git add .
 fecha=`date`
 git commit -m "commit $fecha"
-read prueba
+echo "Introduce tu nombre"
+read prueba | echo "jon"
 echo "pantxisto"
 # echo "pantxisto" | git push
