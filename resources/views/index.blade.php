@@ -7,16 +7,6 @@
 @section('contenido')
     <section>
         <article>
-            <!--
-            <form action="">
-                <fieldset>
-                    <legend><h2>Login</h2></legend>
-                    <label for="email">Email: </label><input type="email" name="email" id="" placeholder="email@mail.com"><br>
-                    <label for="pass">Contraseña: </label><input type="password" name="pass" placeholder="8-16 caracteres"><br>
-                    <button>Entrar</button>
-                </fieldset>
-            </form>
-            -->
             <h3>Ultimas ofertas</h3>
             <div class='oferta'>
                     <h5>Programador Web</h5>
@@ -32,4 +22,5 @@
             </div>
         </article>
     </section>
+
 @endsection
