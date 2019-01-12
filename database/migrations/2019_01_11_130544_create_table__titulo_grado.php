@@ -14,8 +14,9 @@ class CreateTableTituloGrado extends Migration
     public function up()
     {
         Schema::create('TituloGrado', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->integer('idGrado');
+            $table->integer('idAlumno');
+            $table->timestamps('fecFinGrado');
         });
     }
 

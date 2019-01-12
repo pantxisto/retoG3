@@ -14,8 +14,19 @@ class CreateTableOferta extends Migration
     public function up()
     {
         Schema::create('Oferta', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->increments('idOferta');
+            $table->integer('idEmpresa')->unsigned();
+            $table->string('tipoTrabajo');
+            $table->string('sector');
+            $table->string('ubicacion');
+            $table->integer('minExpe');
+            $table->double('salario');
+            $table->timestamps('fecSubido');
+
+            //$table->foreign('idEmpresa')->references('idEmpresa')->on('empresa');
+            $table->foreing('idEmpresa')
+                ->references('idEmpresa')->on('empresa')
+                ->onDelete('cascade');
         });
     }
 

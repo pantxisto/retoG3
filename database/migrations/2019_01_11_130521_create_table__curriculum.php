@@ -14,9 +14,22 @@ class CreateTableCurriculum extends Migration
     public function up()
     {
         Schema::create('Curriculum', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
+            $table->increments('idCV');
+            $table->integer('idAlumno')->unsigned();
+            $table->integer('idGrado')->unsigned();
+            $table->string('idiomas');
+            $table->binary('carnet');
+            $table->string('minExpe');
+
+            //$table->foreign('idAlumno')->references('idAlumno')->on('alumno');
+            $table->foreing('idAlumno')
+                ->references('idAlumno')->on('alumno')
+                ->onDelete('cascade');
+
+            $table->foreing('idGrado')
+                ->references('idGrado')->on('grado')
+                ->onDelete('cascade');
+    });
     }
 
     /**
