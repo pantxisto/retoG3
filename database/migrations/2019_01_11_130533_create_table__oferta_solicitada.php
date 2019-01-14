@@ -18,15 +18,11 @@ class CreateTableOfertaSolicitada extends Migration
             $table->integer('idUsuario')->unsigned();
             $table->datetime('fecSolicitud');
 
-            //$table->foreign('idOferta')->references('idOferta')->on('oferta');
-            $table->foreing('idOferta')
-                ->references('idOferta')->on('oferta')
-                ->onDelete('cascade');
+            $table->foreign('idOferta')->references('idOferta')->on('Oferta');
+           // $table->foreing('idOferta')->references('idOferta')->on('Oferta')->onDelete('cascade');
 
-            //$table->foreign('idUsuario')->references('idUsuario')->on('usuario');
-            $table->foreing('idUsuario')
-                ->references('idUsuario')->on('usuario')
-                ->onDelete('cascade');
+            $table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
+            //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
             $table->primary(['idUsuario', 'idOferta']);
         });

@@ -20,9 +20,9 @@ class CreateTableUsuario extends Migration
             $table->string('email');
             $table->string('password');
             $table->binary('cv');
-            $table->int('idDepart');
+            $table->integer('idDepart');
             $table->string('nomDepart');
-            $table->int('rol');
+            $table->integer('rol');
             $table->datetime('feAlta');
         });
     }

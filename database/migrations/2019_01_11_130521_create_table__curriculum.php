@@ -21,14 +21,11 @@ class CreateTableCurriculum extends Migration
             $table->binary('carnet');
             $table->string('minExpe');
 
-            //$table->foreign('idAlumno')->references('idAlumno')->on('alumno');
-            $table->foreing('idUsuario')
-                ->references('idUsuario')->on('usuario')
-                ->onDelete('cascade');
+            $table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
+            //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
-            $table->foreing('idGrado')
-                ->references('idGrado')->on('grado')
-                ->onDelete('cascade');
+            $table->foreign('idGrado')->references('idGrado')->on('Grado');
+            //$table->foreing('idGrado')->references('idGrado')->on('Grado')->onDelete('cascade');
     });
     }
 
