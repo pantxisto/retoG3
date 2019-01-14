@@ -43,7 +43,7 @@
 |					idAlumno		int			    integer     |
 |	cv				idGrado			int			    integer     |
 |					idiomas			varchar		    string      |
-|					carnet			binary		    binary      |
+|					carnet			bit 		    bit         |
 |					minExpe 		varchar		    string      |
 |												                |
 |---------------------------------------------------------------|
@@ -60,25 +60,44 @@
 |												                |
 |---------------------------------------------------------------|
 |												                |
-|	Usuario			???				????		    ?????       |
+|	    			idUsuario       int             increments  |
+|                   nombre          varchar         string      |
+|                   apellidos       varchar         string      |
+|                   email           varchar         string      |
+|       Usuario     password        varchar         string      |
+|                   feAlta          datetime        datetime    |
+|                   cv              binary          binary      |
+|                   idDepart        int             int         |
+|                   nomDepart       varchar         string      |
+                    rol             int             int         |
 |												                |
 |---------------------------------------------------------------|
+
+
+/* Se modifica la base de datos eliminando las siguientes tablas y creando una nueva llamada
+'Usuario', cone l objetivo de almacenar los datos de cada uno d elos usuarios de forma mas sencilla
+tanto para las consultas como para el control de usuario */
+
+|-----------------------------------------------|
 |												|
 |					idAlumno		int			|
-|					nomAlumno		varchar		|
-|					apellidos	 	varchar		|
-|	Alumno	 		email			varchar		|
-|					email			varchar		|
-|					password		varchar		|
+|					nombre*  		varchar		|
+|					apellidos*	 	varchar		|
+|	Alumno	 		email*			varchar		|
+|					password*		varchar		|
+|					fecAlta* 		datetime	|
 |					cv 				???			|
-|					fecAlta 		datetime	|
 |												|
 |-----------------------------------------------|
 |												|
 |					idProfesor		int			|
 |	Profesor		idDepart		int			|
 |					nomDepart		varchar		|
-|					apellidos		varchar		|
+|					nombre*  		varchar		|
+|					apellidos*	 	varchar		|
+|	         		email*			varchar		|
+|					password*		varchar		|
+|					fecAlta* 		datetime	|
 |					rol				int			|
 |												|
 |-----------------------------------------------|

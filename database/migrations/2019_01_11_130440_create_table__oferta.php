@@ -21,12 +21,12 @@ class CreateTableOferta extends Migration
             $table->string('ubicacion');
             $table->integer('minExpe');
             $table->double('salario');
-            $table->timestamps('fecSubido');
+            $table->datetime('fecSubido');
 
-            //$table->foreign('idEmpresa')->references('idEmpresa')->on('empresa');
-            $table->foreing('idEmpresa')
+            $table->foreign('idEmpresa')->references('idEmpresa')->on('Empresa');
+            /*$table->foreign('idEmpresa')
                 ->references('idEmpresa')->on('empresa')
-                ->onDelete('cascade');
+                ->onDelete('cascade');*/
         });
     }
 

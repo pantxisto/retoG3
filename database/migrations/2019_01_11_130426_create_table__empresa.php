@@ -21,7 +21,7 @@ class CreateTableEmpresa extends Migration
             $table->string('email');
             $table->string('telefono');
             $table->string('link');
-            $table->timestamps('fecAlta');
+            $table->datetime('fecAlta');
         });
     }
 

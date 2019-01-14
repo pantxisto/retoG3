@@ -15,18 +15,20 @@ class CreateTableOfertaSolicitada extends Migration
     {
         Schema::create('OfertaSolicitada', function (Blueprint $table) {
             $table->integer('idOferta')->unsigned();
-            $table->integer('idAlumno')->unsigned();
-            $table->timestamps('fecSolicitud');
+            $table->integer('idUsuario')->unsigned();
+            $table->datetime('fecSolicitud');
 
             //$table->foreign('idOferta')->references('idOferta')->on('oferta');
             $table->foreing('idOferta')
                 ->references('idOferta')->on('oferta')
                 ->onDelete('cascade');
 
-            //$table->foreign('idAlumno')->references('idAlumno')->on('alumno');
-            $table->foreing('idAlumno')
-                ->references('idAlumno')->on('alumno')
+            //$table->foreign('idUsuario')->references('idUsuario')->on('usuario');
+            $table->foreing('idUsuario')
+                ->references('idUsuario')->on('usuario')
                 ->onDelete('cascade');
+
+            $table->primary(['idUsuario', 'idOferta']);
         });
     }
 

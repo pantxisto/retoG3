@@ -15,15 +15,15 @@ class CreateTableCurriculum extends Migration
     {
         Schema::create('Curriculum', function (Blueprint $table) {
             $table->increments('idCV');
-            $table->integer('idAlumno')->unsigned();
+            $table->integer('idUsuario')->unsigned();
             $table->integer('idGrado')->unsigned();
             $table->string('idiomas');
             $table->binary('carnet');
             $table->string('minExpe');
 
             //$table->foreign('idAlumno')->references('idAlumno')->on('alumno');
-            $table->foreing('idAlumno')
-                ->references('idAlumno')->on('alumno')
+            $table->foreing('idUsuario')
+                ->references('idUsuario')->on('usuario')
                 ->onDelete('cascade');
 
             $table->foreing('idGrado')
