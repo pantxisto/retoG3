@@ -36,4 +36,16 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function store(Request $request)
+    {
+        if ($request -> has('nombre')) {
+            $name = $request->input('nombre');
+            $input1 = $request->only('username', 'password');
+            $input2 = $request->except('credit_card');
+            $inputArray = $request->input('products.0.name');
+        }
+    //...
+    }
+
 }
