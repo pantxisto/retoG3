@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableOfertaSolicitada extends Migration
+class CrearTablaOfertaSolicitada extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateTableOfertaSolicitada extends Migration
      */
     public function up()
     {
-        Schema::create('OfertaSolicitada', function (Blueprint $table) {
+        Schema::create('ofertaSolicitada', function (Blueprint $table) {
             $table->integer('idOferta')->unsigned();
             $table->integer('idUsuario')->unsigned();
             $table->datetime('fecSolicitud');
 
-            $table->foreign('idOferta')->references('idOferta')->on('Oferta');
+            $table->foreign('idOferta')->references('idOferta')->on('ofertas');
            // $table->foreing('idOferta')->references('idOferta')->on('Oferta')->onDelete('cascade');
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
+            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
             $table->primary(['idUsuario', 'idOferta']);
@@ -35,6 +35,6 @@ class CreateTableOfertaSolicitada extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('OfertaSolicitada');
+        Schema::dropIfExists('ofertaSolicitada');
     }
 }

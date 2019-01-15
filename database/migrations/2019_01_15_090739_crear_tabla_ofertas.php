@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableOferta extends Migration
+class CrearTablaOfertas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTableOferta extends Migration
      */
     public function up()
     {
-        Schema::create('Oferta', function (Blueprint $table) {
+        Schema::create('ofertas', function (Blueprint $table) {
             $table->increments('idOferta');
             $table->integer('idEmpresa')->unsigned();
             $table->string('tipoTrabajo');
@@ -23,7 +23,7 @@ class CreateTableOferta extends Migration
             $table->double('salario');
             $table->datetime('fecSubido');
 
-            $table->foreign('idEmpresa')->references('idEmpresa')->on('Empresa');
+            $table->foreign('idEmpresa')->references('idEmpresa')->on('empresas');
             /*$table->foreign('idEmpresa')
                 ->references('idEmpresa')->on('empresa')
                 ->onDelete('cascade');*/
@@ -37,6 +37,6 @@ class CreateTableOferta extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Oferta');
+        Schema::dropIfExists('ofertas');
     }
 }

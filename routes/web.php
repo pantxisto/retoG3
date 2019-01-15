@@ -24,7 +24,8 @@ Route::get('/inicio', function () {
 });
 
 Route::get('/registro', function () {
-    return view('registro');
+    return view('registro');   $table->string('email');
+            $table->string('password');
 });
 
 // Route::get('/login', function () {

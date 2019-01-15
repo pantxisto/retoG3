@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTituloGrado extends Migration
+class CrearTablaTituloGrados extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateTableTituloGrado extends Migration
      */
     public function up()
     {
-        Schema::create('TituloGrado', function (Blueprint $table) {
+        Schema::create('tituloGrados', function (Blueprint $table) {
             $table->integer('idGrado')->unsigned();
             $table->integer('idUsuario')->unsigned();
             $table->datetime('fecFinGrado');
 
-            $table->foreign('idGrado')->references('idGrado')->on('Grado');
+            $table->foreign('idGrado')->references('idGrado')->on('grados');
             //$table->foreing('idGrado')->references('idGrado')->on('Grado')->onDelete('cascade');
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
+            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
             $table->primary(['idGrado', 'idUsuario']);
@@ -35,6 +35,6 @@ class CreateTableTituloGrado extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('TituloGrado');
+        Schema::dropIfExists('tituloGrados');
     }
 }

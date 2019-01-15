@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableCurriculum extends Migration
+class CrearTablaCurriculums extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTableCurriculum extends Migration
      */
     public function up()
     {
-        Schema::create('Curriculum', function (Blueprint $table) {
+        Schema::create('curriculums', function (Blueprint $table) {
             $table->increments('idCV');
             $table->integer('idUsuario')->unsigned();
             $table->integer('idGrado')->unsigned();
@@ -21,12 +21,12 @@ class CreateTableCurriculum extends Migration
             $table->binary('carnet');
             $table->string('minExpe');
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('Usuario');
+            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
-            $table->foreign('idGrado')->references('idGrado')->on('Grado');
+            $table->foreign('idGrado')->references('idGrado')->on('grados');
             //$table->foreing('idGrado')->references('idGrado')->on('Grado')->onDelete('cascade');
-    });
+        });
     }
 
     /**
@@ -36,6 +36,6 @@ class CreateTableCurriculum extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Curriculum');
+        Schema::dropIfExists('curriculums');
     }
 }
