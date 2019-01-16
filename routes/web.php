@@ -40,6 +40,8 @@ Route::get('/empresas', function () {
     return view('empresas');
 });
 
+Route::get('user/{id}', 'UserController@showProfile');
+
 Route::get('/perfil', function () {
     return view('perfil');
 });
