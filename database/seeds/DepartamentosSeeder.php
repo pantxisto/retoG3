@@ -12,6 +12,8 @@ class DepartamentosSeeder extends Seeder
      */
     public function run()
     {
+      //DB::table('departamentos')->truncate();
+      
         DB::table('departamentos')->insert([
            'nomDepart' => 'Informatica',
            'siglas'  => 'INFOR',

@@ -12,7 +12,7 @@ class EmpresasSeeder extends Seeder
      */
     public function run()
     {
-
+    	//DB::table('empresas')->truncate();
         //for ($i=0; $i < 50; $i++) {
 		DB::table('empresas')->insert([
            'nomEmpresa' => 'Avant Group',

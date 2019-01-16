@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
         //$this->call(UsersTableSeeder::class);
         $this->call(EmpresasSeeder::class);
         $this->call(DepartamentosSeeder::class);
-        $this->call(CurriculumsSeeder::class);
+        //$this->call(CurriculumsSeeder::class);
         $this->call(GradosSeeder::class);
-        $this->call(OfertaSolicitadaSeeder::class);
+        //$this->call(OfertaSolicitadaSeeder::class);
         $this->call(OfertasSeeder::class);
-        $this->call(TituloGradosSeeder::class);
+        //$this->call(TituloGradosSeeder::class);
         $this->call(UsuariosSeeder::class);
     }
 }

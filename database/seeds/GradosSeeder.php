@@ -12,6 +12,8 @@ class GradosSeeder extends Seeder
      */
     public function run()
     {
+      //DB::table('grados')->truncate();
+      
         DB::table('grados')->insert([
            'siglas' => 'ASIR',
            'nomGrado'  => 'Administracion de Sistemas',

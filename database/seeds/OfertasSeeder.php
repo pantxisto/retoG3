@@ -12,6 +12,8 @@ class OfertasSeeder extends Seeder
      */
     public function run()
     {
+        //DB::table('ofertas')->truncate();
+
         DB::table('ofertas')->insert([
            'idEmpresa' => '1',
            'tipoTrabajo'  => 'Programador Java',
