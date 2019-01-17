@@ -17,21 +17,13 @@
         @show
 
         @section('menu')
-            <div class="row justify-content-center m-5">
-                
-                @if( isset($user) )
-                    @include('partials.navbar')                    
-                @else
-                    @include('login')
-                @endif
-
+            <div class="row justify-content-center m-5"> 
+                @include('partials.navbar')                    
             </div>
         @show
 
         <div class="container">
-            @if( isset($user) )
-                @yield('contenido')
-            @endif
+                @yield('content')
         </div>
 
         <div class="d-flex justify-content-end">

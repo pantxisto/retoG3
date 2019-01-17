@@ -1,3 +1,6 @@
+@extends('layouts.master')
+
+@section('content')
 <form method="POST">
     {{ csrf_field() }}
     <fieldset>
@@ -13,3 +16,4 @@
         <button>Entrar</button>
     </fieldset>
 </form>
+@endsection

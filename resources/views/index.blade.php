@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('contenido')
+@section('content')
 <div class=''>
     <section>
         <article>
@@ -51,4 +51,4 @@
         </article>
     </section>
 </div>
-@stop
+@endsection
