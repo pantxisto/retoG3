@@ -23,7 +23,7 @@
         @show
 
         <div class="container">
-                @yield('content')
+                @yield('contenido')
         </div>
 
         <div class="d-flex justify-content-end">
