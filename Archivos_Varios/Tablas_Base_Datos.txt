@@ -1,0 +1,103 @@
+/* Tablas de la Base de Datos /*
+
+- Nombre Tabla -	 - Columna -	- Tipo -    - Laravel -
+
+|---------------------------------------------------------------|
+|												                |
+|					idEmpresa 		int			    increments  |
+|					nomEmpresa	 	varchar		    string      |
+|					sector			varchar		    string      |
+|	Empresa			email			varchar		    string      |
+|					ubicacion		varchar		    string      |
+|					telefono		varchar		    string      |
+|					fechAlta		datetime	    datetime    |
+|					link			varchar		    string      |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|					idOferta		int			    increments  |
+|					idEmpresa		int			    integer     |
+|					tipoTrabajo		varchar		    string      |
+|	Oferta 			sector			varchar		    string      |
+|					ubicacion		varchar		    string      |
+|					minExpe			int			    integer     |
+|					salario			double		    double      |
+|					fecSubido		datetime	    datetime    |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|					idGrado			int			    increments  |
+|	Grado			siglas			varchar		    string      |
+|					nomGrado		varchar		    string      |
+|					famProfesional	varchar		    string      |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|					idDepart		int			    increments  |
+|	Departamento	nomDepart		varchar		    string      |
+|					siglas			varchar		    string      |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|					idCV			int			    integer     |
+|					idAlumno		int			    integer     |
+|	cv				idGrado			int			    integer     |
+|					idiomas			varchar		    string      |
+|					carnet			bit 		    bit         |
+|					minExpe 		varchar		    string      |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|					idOferta		int			    increments  |
+|OfertaSolicitada	idAlumno		int			    integer     |
+|					fecSolicitud	datetime	    datetime    |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|					idGrado			int			    integer     |
+|	TituloGrado		idAlumno		int			    integer     |
+|					fecFinGrado		datetime	    datetime    |
+|												                |
+|---------------------------------------------------------------|
+|												                |
+|	    			idUsuario       int             increments  |
+|                   nombre          varchar         string      |
+|                   apellidos       varchar         string      |
+|                   email           varchar         string      |
+|       Usuario     password        varchar         string      |
+|                   feAlta          datetime        datetime    |
+|                   cv              binary          binary      |
+|                   idDepart        int             int         |
+|                   nomDepart       varchar         string      |
+                    rol             int             int         |
+|												                |
+|---------------------------------------------------------------|
+
+
+/* Se modifica la base de datos eliminando las siguientes tablas y creando una nueva llamada
+'Usuario', cone l objetivo de almacenar los datos de cada uno d elos usuarios de forma mas sencilla
+tanto para las consultas como para el control de usuario */
+
+|-----------------------------------------------|
+|												|
+|					idAlumno		int			|
+|					nombre*  		varchar		|
+|					apellidos*	 	varchar		|
+|	Alumno	 		email*			varchar		|
+|					password*		varchar		|
+|					fecAlta* 		datetime	|
+|					cv 				???			|
+|												|
+|-----------------------------------------------|
+|												|
+|					idProfesor		int			|
+|	Profesor		idDepart		int			|
+|					nomDepart		varchar		|
+|					nombre*  		varchar		|
+|					apellidos*	 	varchar		|
+|	         		email*			varchar		|
+|					password*		varchar		|
+|					fecAlta* 		datetime	|
+|					rol				int			|
+|												|
+|-----------------------------------------------|

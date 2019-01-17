@@ -17,35 +17,13 @@
         @show
 
         @section('menu')
-            <div class="row justify-content-center m-5">
-                
-                {{--@if( isset($user) )--}}
-                    @include('partials.navbar')
-                {{--@else
-                    <form action="" method="POST">
-                        {{ csrf_field() }}
-                        <fieldset>
-                            <legend><h2>Login</h2></legend>
-                            <div class="form-group">
-                                <label for="email">Email</label><br>
-                                <input lass="form-control" type="email" name="email" id="" placeholder="email@mail.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="pass">Contraseña</label><br>
-                                <input lass="form-control" type="password" name="pass" placeholder="8-16 caracteres">
-                            </div>
-                            <button>Entrar</button>
-                        </fieldset>
-                    </form>
-                @endif--}}
-
+            <div class="row justify-content-center m-5"> 
+                @include('partials.navbar')                    
             </div>
         @show
 
         <div class="container">
-            {{--@if( isset($user) )--}}
-                @yield('contenido')
-            {{--@endif--}}
+                @yield('content')
         </div>
 
         <div class="d-flex justify-content-end">

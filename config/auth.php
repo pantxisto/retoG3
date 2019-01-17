@@ -1,3 +1,4 @@
+<!-- Confiración del sistema de autenticación -->
 <?php
 
 return [
