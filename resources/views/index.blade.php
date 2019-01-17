@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('content')
+@section('contenido')
 <div class=''>
     <section>
         <article>

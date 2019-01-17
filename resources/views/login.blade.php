@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('content')
+@section('contenido')
 <form method="POST">
     {{ csrf_field() }}
     <fieldset>
