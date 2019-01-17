@@ -17,6 +17,7 @@ class CrearTablaTituloGrados extends Migration
             $table->integer('idGrado')->unsigned();
             $table->integer('idUsuario')->unsigned();
             $table->datetime('fecFinGrado');
+            $table->timestamps();
 
             $table->foreign('idGrado')->references('idGrado')->on('grados');
             //$table->foreing('idGrado')->references('idGrado')->on('Grado')->onDelete('cascade');

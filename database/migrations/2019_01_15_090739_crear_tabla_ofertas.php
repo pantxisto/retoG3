@@ -22,6 +22,7 @@ class CrearTablaOfertas extends Migration
             $table->integer('minExpe');
             $table->double('salario');
             $table->datetime('fecSubido');
+            $table->timestamps();
 
             $table->foreign('idEmpresa')->references('idEmpresa')->on('empresas');
             /*$table->foreign('idEmpresa')

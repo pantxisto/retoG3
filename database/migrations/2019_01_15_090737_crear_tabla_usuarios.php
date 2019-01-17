@@ -19,11 +19,12 @@ class CrearTablaUsuarios extends Migration
             $table->string('apellidos');
             $table->string('email');
             $table->string('password');
-            $table->binary('cv');
-            $table->integer('idDepart');
-            $table->string('nomDepart');
+            $table->binary('cv')->nullable($value = true);
+            $table->integer('idDepart')->nullable($value = true);
+            $table->string('nomDepart')->nullable($value = true);
             $table->integer('rol');
             $table->datetime('feAlta');
+            $table->timestamps();
         });
     }
 

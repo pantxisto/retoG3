@@ -20,6 +20,7 @@ class CrearTablaCurriculums extends Migration
             $table->string('idiomas');
             $table->binary('carnet');
             $table->string('minExpe');
+            $table->timestamps();
 
             $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');

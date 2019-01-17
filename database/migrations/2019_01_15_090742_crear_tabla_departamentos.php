@@ -17,6 +17,7 @@ class CrearTablaDepartamentos extends Migration
             $table->increments('idGrado');
             $table->string('nomDepart');
             $table->string('siglas');
+            $table->timestamps();
         });
     }
 

@@ -18,6 +18,7 @@ class CrearTablaGrados extends Migration
             $table->string('siglas');
             $table->string('nomGrado');
             $table->string('famProfesional');
+            $table->timestamps();
         });
     }
 

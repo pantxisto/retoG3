@@ -17,6 +17,7 @@ class CrearTablaOfertaSolicitada extends Migration
             $table->integer('idOferta')->unsigned();
             $table->integer('idUsuario')->unsigned();
             $table->datetime('fecSolicitud');
+            $table->timestamps();
 
             $table->foreign('idOferta')->references('idOferta')->on('ofertas');
            // $table->foreing('idOferta')->references('idOferta')->on('Oferta')->onDelete('cascade');

@@ -22,6 +22,7 @@ class CrearTablaEmpresas extends Migration
             $table->string('telefono');
             $table->string('link');
             $table->datetime('fecAlta');
+            $table->timestamps();
         });
     }
 
