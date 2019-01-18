@@ -16,7 +16,7 @@
 // }]);
 
 Route::get('/', function () {
-    return view('login');
+    return view('administrar');
 });
 
 Route::get('/inicio', function () {
