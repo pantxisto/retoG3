@@ -23,19 +23,19 @@ Route::get('/registro', function () {
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/inicio', function () {
         return view('index');
-    });
+    })->name('inicio');
     Route::get('/ofertas', function () {
         return view('ofertas');
-    });
+    })->name('ofertas');
     Route::get('/empresas', function () {
         return view('empresas');
     });
     Route::get('/perfil', function () {
         return view('perfil');
-    });
+    })->name('perfil');
     Route::get('/administrar', function () {
         return view('administrar');
-    });
+    })->name('administrar');
     
 });
 

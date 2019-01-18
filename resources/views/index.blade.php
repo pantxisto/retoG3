@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('contenido')
-{{--<div class=''>
+<div class=''>
     <section>
         <article>
             <h3 class='text-center'>Ultimas ofertas</h3>
@@ -50,5 +50,5 @@
             </div>
         </article>
     </section>
-</div>--}}
+</div>
 @endsection
