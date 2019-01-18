@@ -11,45 +11,37 @@
 |
 */
 
-// Route::get('/', ['middleware' => 'auth', function () {
-//     return view('index');
-// }]);
-
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
-Route::get('/inicio', function () {
-    return view('index');
-});
 
 Route::get('/registro', function () {
-    return view('registro');   $table->string('email');
-            $table->string('password');
+    return view('auth.register'); 
 });
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
-
-Route::get('/ofertas', function () {
-    return view('ofertas');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/inicio', function () {
+        return view('index');
+    });
+    Route::get('/ofertas', function () {
+        return view('ofertas');
+    });
+    Route::get('/empresas', function () {
+        return view('empresas');
+    });
+    Route::get('/perfil', function () {
+        return view('perfil');
+    });
+    Route::get('/administrar', function () {
+        return view('administrar');
+    });
+    
 });
 
-Route::get('/empresas', function () {
-    return view('empresas');
-});
+// Route::get('user/{id}', 'UserController@showProfile');
 
-Route::get('user/{id}', 'UserController@showProfile');
+// php artisan make:auth
+Auth::routes();
 
-Route::get('/perfil', function () {
-    return view('perfil');
-});
-
-Route::get('/administrar', function () {
-    return view('administrar');
-});
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');

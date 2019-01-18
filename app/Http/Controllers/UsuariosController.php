@@ -11,4 +11,5 @@ class UsuariosController extends Controller
     {
         return view('perfil', ['usuario' => Usuario::findOrFail($idUsuario)]);
     }
+    
 }
