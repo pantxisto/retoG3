@@ -14,9 +14,7 @@
 Route::get('/', function () {
     return view('auth.login');
 });*/
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/index', 'OfertasController@index');
 
 
 Route::get('/registro', function () {
