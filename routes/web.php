@@ -23,13 +23,13 @@ Route::get('registro', 'Auth\RegisterController@showRegistrationForm');
 Route::post('register', 'Auth\RegisterController@register')->name('register');
 
 // Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+Route::get('reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
 // Ruta de Unai
 // Route::get('/index', 'OfertasController@index');
@@ -51,12 +51,11 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/administrar', function () {
         return view('administrar');
     })->name('administrar');
-    
 });
 
 // Route::get('user/{id}', 'UserController@showProfile');
 
 // php artisan make:auth
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

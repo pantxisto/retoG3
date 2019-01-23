@@ -3,7 +3,7 @@
 @section('contenido')
 <form method="POST" action="{{ route('login') }}">
     @csrf
-        <legend><h2>Login</h2></legend>
+        <legend><h2>Bienvenido</h2></legend>
 
         <div class="form-group row">
             <label for="email">{{ __('Email') }}</label><br>
@@ -38,7 +38,6 @@
             <button type="submit" class="btn btn-primary">
                 {{ __('Entrar') }}
             </button>
-
             @if (Route::has('password.request'))
                 <a class="btn btn-link" href="{{ route('password.request') }}">
                     {{ __('¿Has olvidado tu contraseña?') }}
