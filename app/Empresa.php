@@ -8,4 +8,9 @@ class Empresa extends Model
 {
     //
     protected $table = 'empresas';
+
+    public function ofertas()
+    {
+        return $this->hasMany('App\Oferta', 'idEmpresa');
+    }
 }

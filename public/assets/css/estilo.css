@@ -40,7 +40,7 @@ div.oferta{
 }
 
 div.oferta:hover{
-    background-color: lightskyblue;
+    background-color: orange;
     cursor: pointer;
     
     border-radius: 1em;
@@ -55,4 +55,25 @@ p{
 h2{
     text-align: center;
     margin-bottom: 2em;
+}
+.contenido-ofertas{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 4px;
+}
+.filtros{
+    background-color: orange;
+    border-radius: 8px;
+}
+.btn-primary{
+    background-color: gray;
+    border: solid black 2px;
+}
+.btn-primary:hover{
+    background-color: green;
+    border: solid black 2px;
+}
+.form-check{
+    margin-top: 10px;
+    margin-left: 10px;
 }

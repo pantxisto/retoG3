@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Rutas y vistas a modificar
-
 // Para el login y logout
 Route::get('/', 'Auth\LoginController@showLoginForm');
 
@@ -34,6 +31,8 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+// Ruta de Unai
+Route::get('/index', 'OfertasController@index');
 
 
 //Rutas y vistas que no hay que modificar
