@@ -11,14 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+// Rutas y vistas a modificar
+
+// Para el login y logout
+Route::get('/', 'Auth\LoginController@showLoginForm');
+
+Route::post('login', 'Auth\LoginController@login')->name('login');
+
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Para el registro
+Route::get('registro', 'Auth\RegisterController@showRegistrationForm');
+
+Route::post('register', 'Auth\RegisterController@register')->name('register');
+
+// Password Reset Routes...
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-Route::get('/registro', function () {
-    return view('auth.register'); 
-});
+
+//Rutas y vistas que no hay que modificar
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/inicio', function () {
@@ -42,6 +60,6 @@ Route::group(['middleware' => 'auth'], function() {
 // Route::get('user/{id}', 'UserController@showProfile');
 
 // php artisan make:auth
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
