@@ -32,15 +32,13 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 // Ruta de Unai
-Route::get('/index', 'OfertasController@index');
+// Route::get('/index', 'OfertasController@index');
 
 
 //Rutas y vistas que no hay que modificar
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/inicio', function () {
-        return view('index');
-    })->name('inicio');
+    Route::get('/inicio', 'OfertasController@index')->name('inicio');
     Route::get('/ofertas', function () {
         return view('ofertas');
     })->name('ofertas');
@@ -59,6 +57,6 @@ Route::group(['middleware' => 'auth'], function() {
 // Route::get('user/{id}', 'UserController@showProfile');
 
 // php artisan make:auth
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -5,9 +5,7 @@
     <section>
         <article>
             <h3 class='text-center'>Ultimas ofertas</h3>
-                @foreach ($ofertas as $oferta)
-                    @include('partials.ofertas')
-                @endforeach
+            @include('partials.ofertas', ['ofertas'=>$ofertas])
         </article>
     </section>
 </div>
