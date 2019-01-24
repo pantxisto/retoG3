@@ -8,4 +8,17 @@ class Departamento extends Model
 {
     //
     protected $table = 'departamentos';
+    //protected $primaryKey = 'idDepart';
+    protected $fillable = ['idGrado', 'nomDepart', 'siglas'];
+    protected $guarded = ['created_at', 'update_at'];
+
+    public function getTableColumns($table)
+    {
+        return DB::getSchemaBuilder()->getColumnListing($table);
+
+        // OR
+
+        return Schema::getColumnListing($table);
+
+    }
 }

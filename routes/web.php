@@ -11,6 +11,7 @@
 |
 */
 // Para el login y logout
+
 Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::post('login', 'Auth\LoginController@login')->name('login');
