@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
 @section('contenido')
-    @include('partials.aside')
+<div class="row">
+   @include('partials.aside')
+   @include('partials.tabla')
+</div>
 @stop
