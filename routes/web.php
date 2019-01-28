@@ -40,9 +40,12 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/inicio', 'OfertasController@index')->name('inicio');
+    
+    Route::get('/ofertas', 'OfertasController@index')->name('ofertas');
+/*
     Route::get('/ofertas', function () {
         return view('ofertas');
-    })->name('ofertas');
+    })->name('ofertas');*/
     Route::get('/empresas', function () {
         return view('empresas');
     });
@@ -60,3 +63,4 @@ Route::group(['middleware' => 'auth'], function() {
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+

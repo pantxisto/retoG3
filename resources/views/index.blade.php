@@ -5,7 +5,7 @@
     <section>
         <article>
             <h3 class='text-center'>Ultimas ofertas</h3>
-            @include('partials.ofertas', ['ofertas'=>$ofertas])
+            @include('partials.ofertas')
         </article>
         <?php $name = Auth::user()->name ?>
         {{ $name }}

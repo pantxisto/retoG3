@@ -58,12 +58,15 @@ h2{
 }
 .contenido-ofertas{
     display: grid;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 3fr 5fr;
     grid-gap: 4px;
 }
 .filtros{
     background-color: orange;
     border-radius: 8px;
+}
+#filtro{
+    padding: 10px;
 }
 .btn-primary{
     background-color: gray;
@@ -73,7 +76,5 @@ h2{
     background-color: green;
     border: solid black 2px;
 }
-.form-check{
-    margin-top: 10px;
-    margin-left: 10px;
-}
+
+
