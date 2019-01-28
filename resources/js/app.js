@@ -60,8 +60,13 @@ var filtro = new Vue({
             {estudios: 'Grado Superior'},
             {estudios: 'Grado Medio'},
         ],
-        mostrar:                
-             false,
+        mostrar: false,
         
+    },
+    methods: {
+        cambiarEstado: function() {
+            this.mostrar = !this.mostrar;
+        }
     }
 }) ;
+

@@ -29,12 +29,10 @@
                                     <li v-for="filtro in filtroCat">
                                         @{{filtro.categoria}} <input type="checkbox" name="" id="">
                                     </li>
-                                    <button class="btn btn-link" @click="cambiarValor" >Mostra más</button>
-                                    <span v-if="mostrar">
-                                        <li v-for="filtro in filtroCat2">
-                                            @{{filtro.categoria2}}
-                                        </li>
-                                    </span>
+                                    <li v-if="mostrar" v-for="filtro in filtroCat2">
+                                        @{{filtro.categoria2}}
+                                    </li>
+                                    <button @click="cambiarEstado">Mostrar/Ocultar</button>
                                 </ul> 
                             <li>
                                 <strong>Estudios: </strong>
