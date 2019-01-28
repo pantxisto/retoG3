@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'sendemail'),
+    'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'jonandonicastelo@outlook.com'),
-        'name' => env('MAIL_FROM_NAME', 'jonandoni'),
+        'address' => env('MAIL_FROM_ADDRESS', 'retoG3Laravel@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'retoG3Laravel'),
     ],
 
     /*
@@ -99,7 +99,9 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => env('MAIL_SENDMAIL', '/usr/sbin/sendmail -bs'),
+
+    // 'sendmail' => '/usr/sbin/sendmail -bs',
 
     /*
     |--------------------------------------------------------------------------
