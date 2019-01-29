@@ -47952,6 +47952,7 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+// Componente Vue de prueba.
 
 var app = new Vue({
   el: '#app'
@@ -47998,6 +47999,12 @@ var filtro = new Vue({
   methods: {
     cambiarEstado: function cambiarEstado() {
       this.mostrar = !this.mostrar;
+
+      if (this.mostrar) {
+        $("#cambiarFiltro").html("Mostrar menos");
+      } else if (!this.mostrar) {
+        $("#cambiarFiltro").html("Mostrar más");
+      }
     }
   }
 });
@@ -48149,8 +48156,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\retoG3\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\retoG3\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /opt/lampp/htdocs/retoG3/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/retoG3/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
