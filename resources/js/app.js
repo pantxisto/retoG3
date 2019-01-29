@@ -32,3 +32,41 @@ const app = new Vue({
     el: '#app'
 });
 
+// Filtros con Vue
+var filtro = new Vue({
+    el: '#filtro',
+    data:{
+        filtroFecha: [
+            {fecha:'Mas Recientes'},
+            {fecha:'Últimas 24 horas '},
+            {fecha:'Últimos 7 días'}
+        ],
+        filtroProv:[
+            {provincia:'Álava/Araba'},
+            {provincia:'Vizcaya/Bizkaia'},
+            {provincia:'Guipúzcoa/Gipuzkoa'},
+        ],
+        filtroCat: [
+            {categoria:'Desarrollo Web'},
+            {categoria:'Multiplataforma'},
+            {categoria:'Servicios en Red'},
+        ],
+        filtroCat2: [
+            {categoria2:'Quimica'},
+            {categoria2:'Gestion de Ventas'},
+            {categoria2:'Administacion y Finanzas'},
+        ],
+        filtroEstudios: [
+            {estudios: 'Grado Superior'},
+            {estudios: 'Grado Medio'},
+        ],
+        mostrar: false,
+        
+    },
+    methods: {
+        cambiarEstado: function() {
+            this.mostrar = !this.mostrar;
+        }
+    }
+}) ;
+

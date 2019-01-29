@@ -4,28 +4,48 @@
     <div class="contenido-ofertas">
 
             <div class="filtros">
-                <div class="form-check">
-                    <h6><b>Ordenar por:</b></h6>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Fecha de publicacion</label><br>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Ultimas 24h</label><br>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Ultimos 7 dias</label><br>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Ultimos 15 dias</label><br><br>
-                    <h6><b>Puestos:</b></h6>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Desarrollo web</label><br>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Multiplataforma</label><br>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Otro</label><br>
-                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Otros</label><br>
-                
+                <div id="filtro">
+                    <ul class = "list-unstyled">
+                        <li>
+                        <strong> Ordenar por:</strong>
+                        </li>
+                            <ul >
+                                <li v-for="filtro in filtroFecha">
+                                    @{{filtro.fecha}} <input type="checkbox" name="" id="">
+                                </li>
+                            </ul>
+                        <li>
+                                <strong> Provincias:</strong>
+                        </li>  
+                            <ul>
+                                <li v-for="filtro in filtroProv">
+                                    @{{filtro.provincia}} <input type="checkbox" name="" id="">
+                                </li>
+                            </ul>  
+                            <li>
+                                    <strong> Categoria:</strong>
+                            </li>  
+                                <ul>
+                                    <li v-for="filtro in filtroCat">
+                                        @{{filtro.categoria}} <input type="checkbox" name="" id="">
+                                    </li>
+                                    <li v-if="mostrar" v-for="filtro in filtroCat2">
+                                        @{{filtro.categoria2}}
+                                    </li>
+                                    <button @click="cambiarEstado">Mostrar/Ocultar</button>
+                                </ul> 
+                            <li>
+                                <strong>Estudios: </strong>
+                            </li>
+                                <ul>
+                                    <li v-for="estudio in filtroEstudios">
+                                        @{{estudio.estudios}}<input type="checkbox" name="" id="">
+                                    </li>
+                                </ul> 
+                                   
+                    </ul>
+                </div>
             </div>
-        </div>
         @include('partials.ofertas')
     </div>  
 @stop

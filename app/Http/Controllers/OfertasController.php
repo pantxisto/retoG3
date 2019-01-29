@@ -19,6 +19,6 @@ class OfertasController extends Controller
         	->orderBy('idOferta', 'DESC')
             ->get();
         //El controlador llama a la vista y le pasa el resultado de la consultas
-        return view('index',['ofertas'=>$ofertas]);
+        return view('ofertas',['ofertas'=>$ofertas]);
     }
 }
