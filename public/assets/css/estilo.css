@@ -58,7 +58,7 @@ h2{
 }
 .contenido-ofertas{
     display: grid;
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 4fr 5fr;
     grid-gap: 4px;
 }
 .filtros{

@@ -27,7 +27,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+// Componente Vue de prueba.
 const app = new Vue({
     el: '#app'
 });
@@ -36,6 +36,7 @@ const app = new Vue({
 var filtro = new Vue({
     el: '#filtro',
     data:{
+        
         filtroFecha: [
             {fecha:'Mas Recientes'},
             {fecha:'Últimas 24 horas '},
@@ -66,6 +67,12 @@ var filtro = new Vue({
     methods: {
         cambiarEstado: function() {
             this.mostrar = !this.mostrar;
+            if(this.mostrar) {
+                $("#cambiarFiltro").html("Mostrar menos");
+               
+            }else if(!this.mostrar) {
+                $("#cambiarFiltro").html("Mostrar más");
+            }
         }
     }
 }) ;
