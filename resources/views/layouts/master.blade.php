@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Inicio</title>
-        <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/estilo.css">
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <link href="{{ asset('assets/css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('assets/css/estilo.css') }}" rel="stylesheet">
+        <link rel="icon" href="{{ asset('img/favicon.ico') }}">
     </head>
 <body>
     <div class="container">
@@ -27,7 +28,7 @@
             </div>
 
             <div class="d-flex justify-content-end">
-                    <a href="http://www.hezkuntza.ejgv.euskadi.eus/r43-2591/eu"><img src="img/gobiernoVasco.png" alt=""></a>
+                    <a href="http://www.hezkuntza.ejgv.euskadi.eus/r43-2591/eu"><img src="{{ asset('img/gobiernoVasco.png') }}" alt=""></a>
             </div>
         </div>
 

@@ -28,7 +28,12 @@ Route::get('reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('
 
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+// Los dos siguientes links actuan sobre una misma página pero el primero sirve para que se mande el email a esa direccion
+// y el segundo para que al entrar a la direccion le redirija al controlador
+
+Route::get('/Proyectos/retoG3/public/password/reset/{token}')->name('password.reset');
+
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
