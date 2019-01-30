@@ -5,7 +5,10 @@
 
             <div class="filtros">
                 <div id="filtro">
+                
                     <ul class = "list-unstyled">
+                    <li><strong>Buscar Empresa: @{{mensajeEmpresas}} </strong></li>
+                    <input id="mensajeEmpresas" v-model="mensajeEmpresas" type="text"  placeholder="Buscar..."><img width="25px" src="{{ asset('img/lupa.png') }}" alt="">
                         <li>
                         <strong> Ordenar por:</strong>
                         </li>
@@ -19,7 +22,7 @@
                         </li>  
                             <ul>
                                 <li v-for="filtro in filtroProv">
-                                    @{{filtro.provincia}} <input type="checkbox" name="" id="">
+                                    @{{filtro.provincia}} <input type="checkbox"  name="" id="">
                                 </li>
                             </ul>  
                             <li>

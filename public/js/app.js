@@ -47961,6 +47961,7 @@ var app = new Vue({
 var filtro = new Vue({
   el: '#filtro',
   data: {
+    mensajeEmpresas: '',
     filtroFecha: [{
       fecha: 'Mas Recientes'
     }, {

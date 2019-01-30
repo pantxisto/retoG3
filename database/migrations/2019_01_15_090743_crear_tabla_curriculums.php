@@ -22,7 +22,7 @@ class CrearTablaCurriculums extends Migration
             $table->string('minExpe');
             $table->timestamps();
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
+            $table->foreign('idUsuario')->references('id')->on('users');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
             $table->foreign('idGrado')->references('idGrado')->on('grados');

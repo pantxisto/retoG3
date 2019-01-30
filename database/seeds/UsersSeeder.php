@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class UsersSeeder extends Seeder
@@ -12,6 +11,7 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
+     
         // Borramos los datos de la tabla
         DB::table('users')->delete();
 

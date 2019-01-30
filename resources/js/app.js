@@ -36,7 +36,7 @@ const app = new Vue({
 var filtro = new Vue({
     el: '#filtro',
     data:{
-        
+        mensajeEmpresas: '',
         filtroFecha: [
             {fecha:'Mas Recientes'},
             {fecha:'Últimas 24 horas '},
@@ -76,4 +76,3 @@ var filtro = new Vue({
         }
     }
 }) ;
-

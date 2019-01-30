@@ -19,5 +19,5 @@ class DatabaseSeeder extends Seeder
         //$this->call(OfertaSolicitadaSeeder::class);
         $this->call(OfertasSeeder::class);
         //$this->call(TituloGradosSeeder::class);
-    }
+        }
 }

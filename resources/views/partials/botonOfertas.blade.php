@@ -4,7 +4,7 @@
     <p>Empresa: {{ $oferta->nomEmpresa }}<br>
         Ubicacion: {{ $oferta->ubicacion }}</p>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#oferta{{ $oferta->idOferta }}" data-whatever="@mdo">Detalles</button>
+    <button type="button" class="botonOfertas btn btn-primary" data-toggle="modal" data-target="#oferta{{ $oferta->idOferta }}" data-whatever="@mdo">Detalles</button>
     
     <div class="modal fade" id="oferta{{ $oferta->idOferta }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
