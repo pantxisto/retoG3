@@ -50,6 +50,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/administrar', 'AdministrarController@index')->name('administrar');
 
+<<<<<<< HEAD
     Route::get('/empresas', 'EmpresasController@index')->name('empresas');
 
 
@@ -68,6 +69,14 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/administrar', function () {
         return view('administrar');
     })->name('administrar');*/
+=======
+    Route::get('/empresas', function () {
+        return view('empresas');
+    });
+    Route::get('/perfil', 'PerfilController@index')->name('perfil.get');
+    Route::post('/perfil/{id}', 'PerfilController@update')->name('perfil.post');
+
+>>>>>>> e629bc06f6c52680b7a48cc6313e1f30ef113d57
 });
 
 // Route::get('user/{id}', 'UserController@showProfile');

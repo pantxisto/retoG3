@@ -23,9 +23,7 @@ class UsersSeeder extends Seeder
             'password'  => '1234567',
             'cv'  => null,
             'idDepart'  => null,
-            'nomDepart'  => null,
             'rol'  => '1',
-            'feAlta'  => date('Y-m-d H:m:s'),
             'remember_token'  => 'dfgrt',
             'created_at'  => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s')
@@ -39,9 +37,7 @@ class UsersSeeder extends Seeder
             'password'  => '1234567',
             'cv'  => null,
             'idDepart'  => null,
-            'nomDepart'  => null,
             'rol'  => '1',
-            'feAlta'  => date('Y-m-d H:m:s'),
             'remember_token'  => 'dfgrt',
             'created_at'  => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s')
@@ -55,9 +51,7 @@ class UsersSeeder extends Seeder
             'password'  => '1234567',
             'cv'  => null,
             'idDepart'  => null,
-            'nomDepart'  => null,
             'rol'  => '1',
-            'feAlta'  => date('Y-m-d H:m:s'),
             'remember_token'  => 'dfgrt',
             'created_at'  => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s')
