@@ -28,9 +28,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 // Componente Vue de prueba.
-const app = new Vue({
-    el: '#app'
-});
 
 // Filtros con Vue
 var filtro = new Vue({
@@ -75,4 +72,27 @@ var filtro = new Vue({
             }
         }
     }
+}) ;
+
+var filtroEmpresa = new Vue({
+    el: '#filtroEmp',
+    data:{
+        mensajeEmpresas: '',
+        filtroFecha: [
+            {fecAlta:'Mas Recientes'},
+            {fecAlta:'Últimas 24 horas '},
+            {fecAlta:'Últimos 7 días'}
+        ],
+        filtroProv:[
+            {provincia:'Álava/Araba'},
+            {provincia:'Vizcaya/Bizkaia'},
+            {provincia:'Guipúzcoa/Gipuzkoa'},
+        ],
+        filtroNom: [
+            {nomEmpresa:'A-Z'},
+            {nomEmpresa:'Z-A'},
+        ],
+        mostrar: false,
+    },
+    
 }) ;

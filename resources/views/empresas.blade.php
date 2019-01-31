@@ -1,25 +1,40 @@
 @extends('layouts.master')
 
 @section('contenido')
-<div class=''>
-    <section>
-        <article>
-            <h3 class='text-center'>Datos empresas</h3>
-                @foreach ($empresas as $oferta)
-                        <div class='oferta'>                         
-                            <h5>{{ $oferta->nomEmpresa }}</h5>                        
-                            <p>Sector: {{ $oferta->sector }} <br>
-                                Localidad: {{ $oferta->ubicacion }}</p>                                                                                
-                            <div class="row">
-                                <p class="col-md-4">Email: {{ $oferta->email}}</p>
-                                <p class="col-md-4">Teléfono: {{ $oferta->telefono }}</p>
-                                <p class="col-md-4">Link: {{ $oferta->link }}</p>
-                            </div>
-                            <time>{{ $oferta->fecAlta }}</time><br>
-                            @include('partials.botonOfertas')
-                        </div>
-                @endforeach
-        </article>
-    </section>
+<div class='contenido-ofertas'>
+    <div class='filtros'>
+        <div id='filtroEmp'>
+            <ul class = "list-unstyled">
+                <li><strong>Buscar Empresa: @{{mensajeEmpresas}} </strong></li>
+                    <input id="mensajeEmpresas" v-model="mensajeEmpresas" type="text"  placeholder="Buscar..."><img width="25px" src="{{ asset('img/lupa.png') }}" alt="">
+                <li>
+                    <strong> Ordenar por:</strong>
+                </li>
+                    <ul >
+                        <li v-for="filtroEmpresa in filtroFecha">
+                            @{{ filtroEmpresa.fecAlta }} <input type="checkbox" name="" id="">
+                        </li>
+                    </ul>
+                <li>
+                    <strong> Provincias:</strong>
+                </li>  
+                    <ul>
+                        <li v-for="filtroEmpresa in filtroProv">
+                            @{{filtroEmpresa.provincia}} <input type="checkbox" name="" id="">
+                        </li>
+                    </ul>  
+                <li>
+                    <strong> Orden nombres:</strong>
+                </li>
+                    <ul>
+                        <li v-for="filtroEmpresa in filtroNom">
+                            @{{filtroEmpresa.nomEmpresa}}<input type="checkbox" name="" id="">
+                        </li>
+                    </ul>
+                        
+            </ul>
+        </div>
+    </div>
+    @include('partials.empresas')
 </div>
 @stop

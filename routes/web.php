@@ -50,13 +50,17 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/administrar', 'AdministrarController@index')->name('administrar');
 
+    Route::get('/empresas', 'EmpresasController@index')->name('empresas');
+
+
 /*
     Route::get('/ofertas', function () {
         return view('ofertas');
     })->name('ofertas');*/
+    /*
     Route::get('/empresas', function () {
         return view('empresas');
-    });
+    });*/
     Route::get('/perfil', function () {
         return view('perfil');
     })->name('perfil');
