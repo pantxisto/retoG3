@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use App\Oferta;
-use App\Usuario;
+use App\User;
 use App\Empresa;
 
 use App\Departamento;
@@ -15,12 +15,12 @@ class AdministrarController extends Controller
 {
     public function index(Request $request)
     {
-    	$nomTabla = 'usuarios';
+    	$nomTabla = 'users';
         //$table = Departamento::all();
         $columns = Schema::getColumnListing($nomTabla);
         //return view('administrar',['table'=>$table, 'columns'=>$columns]);
         //if(!$request->ajax())return redirect('/');
-        $table = Usuario::all();
+        $table = User::all();
         //$columns = Schema::getColumnListing($nomTabla);
         return view('administrar',['table'=>$table, 'columns'=>$columns]);
     }

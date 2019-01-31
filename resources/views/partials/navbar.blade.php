@@ -16,6 +16,6 @@
 <form id="administrar-form" action="{{ route('administrar') }}" method="GET" style="display: none;">
     @csrf
 </form>
-<form id="perfil-form" action="{{ route('perfil') }}" method="GET" style="display: none;">
+<form id="perfil-form" action="{{ route('perfil.get') }}" method="GET" style="display: none;">
     @csrf
 </form>

@@ -9,7 +9,7 @@ class Departamento extends Model
     //
     protected $table = 'departamentos';
     //protected $primaryKey = 'idDepart';
-    protected $fillable = ['idGrado', 'nomDepart', 'siglas'];
+    protected $fillable = ['idDepart', 'nomDepart', 'siglas'];
     protected $guarded = ['created_at', 'update_at'];
 
     public function getTableColumns($table)

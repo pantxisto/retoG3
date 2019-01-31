@@ -14,18 +14,17 @@ class CrearTablaTituloGrados extends Migration
     public function up()
     {
         Schema::create('tituloGrados', function (Blueprint $table) {
-            $table->integer('idGrado')->unsigned();
-            $table->integer('idUsuario')->unsigned();
+            $table->unsignedInteger('idGrado');
+            $table->foreign('idGrado')->references('idGrado')->on('grados');
+            $table->unsignedInteger('idUsuario');
+            $table->foreign('idUsuario')->references('id')->on('users');
             $table->datetime('fecFinGrado');
             $table->timestamps();
-
-            $table->foreign('idGrado')->references('idGrado')->on('grados');
+            $table->primary(['idGrado', 'idUsuario']);
             //$table->foreing('idGrado')->references('idGrado')->on('Grado')->onDelete('cascade');
-
-            $table->foreign('idUsuario')->references('id')->on('users');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
-            $table->primary(['idGrado', 'idUsuario']);
+            
         });
     }
 

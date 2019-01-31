@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
 @section('contenido')
-
-
 <form method="POST" action="{{ route('register') }}">
     @csrf
         <legend><h2>Bienvenido al registro</h2></legend>
@@ -45,10 +43,10 @@
         </div>
 
         <div class="form-group row mb-0">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary" onclick="getDate()">
                 {{ __('Registrarse') }}
             </button>
         </div>
-
+        
 </form>
 @endsection

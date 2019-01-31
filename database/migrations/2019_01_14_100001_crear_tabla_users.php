@@ -22,9 +22,7 @@ class CrearTablaUsers extends Migration
             $table->string('password');
             $table->binary('cv')->nullable($value = true);
             $table->integer('idDepart')->nullable($value = true);
-            $table->string('nomDepart')->nullable($value = true);
             $table->integer('rol')->nullable($value = true);
-            $table->datetime('feAlta')->nullable($value = true);
             $table->rememberToken();
             $table->timestamps();
         });
