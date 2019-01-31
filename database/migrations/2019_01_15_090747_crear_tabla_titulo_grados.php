@@ -22,7 +22,7 @@ class CrearTablaTituloGrados extends Migration
             $table->foreign('idGrado')->references('idGrado')->on('grados');
             //$table->foreing('idGrado')->references('idGrado')->on('Grado')->onDelete('cascade');
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
+            $table->foreign('idUsuario')->references('id')->on('users');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
             $table->primary(['idGrado', 'idUsuario']);

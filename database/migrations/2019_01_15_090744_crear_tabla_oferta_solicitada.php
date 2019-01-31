@@ -22,7 +22,7 @@ class CrearTablaOfertaSolicitada extends Migration
             $table->foreign('idOferta')->references('idOferta')->on('ofertas');
            // $table->foreing('idOferta')->references('idOferta')->on('Oferta')->onDelete('cascade');
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios');
+            $table->foreign('idUsuario')->references('id')->on('users');
             //$table->foreing('idUsuario')->references('idUsuario')->on('Usuario')->onDelete('cascade');
 
             $table->primary(['idUsuario', 'idOferta']);

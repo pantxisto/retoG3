@@ -27,8 +27,52 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+// Componente Vue de prueba.
 const app = new Vue({
     el: '#app'
 });
 
+// Filtros con Vue
+var filtro = new Vue({
+    el: '#filtro',
+    data:{
+        mensajeEmpresas: '',
+        filtroFecha: [
+            {fecha:'Mas Recientes'},
+            {fecha:'Últimas 24 horas '},
+            {fecha:'Últimos 7 días'}
+        ],
+        filtroProv:[
+            {provincia:'Álava/Araba'},
+            {provincia:'Vizcaya/Bizkaia'},
+            {provincia:'Guipúzcoa/Gipuzkoa'},
+        ],
+        filtroCat: [
+            {categoria:'Desarrollo Web'},
+            {categoria:'Multiplataforma'},
+            {categoria:'Servicios en Red'},
+        ],
+        filtroCat2: [
+            {categoria2:'Quimica'},
+            {categoria2:'Gestion de Ventas'},
+            {categoria2:'Administacion y Finanzas'},
+        ],
+        filtroEstudios: [
+            {estudios: 'Grado Superior'},
+            {estudios: 'Grado Medio'},
+        ],
+        mostrar: false,
+        
+    },
+    methods: {
+        cambiarEstado: function() {
+            this.mostrar = !this.mostrar;
+            if(this.mostrar) {
+                $("#cambiarFiltro").html("Mostrar menos");
+               
+            }else if(!this.mostrar) {
+                $("#cambiarFiltro").html("Mostrar más");
+            }
+        }
+    }
+}) ;

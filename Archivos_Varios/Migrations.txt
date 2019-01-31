@@ -9,6 +9,7 @@ php artisan make:migration crear_tabla_curriculums --create=curriculums
 php artisan make:migration crear_tabla_ofertaSolicitada --create=ofertaSolicitada
 php artisan make:migration crear_tabla_tituloGrados --create=tituloGrados
 
+
 //comando para crear las tablas mediante las migraciones
 php artisan migrate
 

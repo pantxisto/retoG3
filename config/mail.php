@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'retoG3Laravel@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'retoG3Laravel'),
     ],
 
     /*
@@ -99,7 +99,9 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => env('MAIL_SENDMAIL', '/usr/sbin/sendmail -bs'),
+
+    // 'sendmail' => '/usr/sbin/sendmail -bs',
 
     /*
     |--------------------------------------------------------------------------
