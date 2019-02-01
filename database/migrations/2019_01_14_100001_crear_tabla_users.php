@@ -21,6 +21,8 @@ class CrearTablaUsers extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->binary('cv')->nullable($value = true);
+            $table->string('mime')->nullable($value = true);
+            $table->integer('size')->nullable($value = true);
             $table->integer('idDepart')->nullable($value = true);
             $table->integer('rol')->nullable($value = true);
             $table->rememberToken();

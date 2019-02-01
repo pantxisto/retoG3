@@ -40,6 +40,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 // Ruta de Unai
 // Route::get('/index', 'OfertasController@index');
 
+// Ruta para descargar el CV
+Route::get('/download/{id}' , 'PerfilController@downloadFile')->name('downloadFile');
 
 //Rutas y vistas que no hay que modificar
 
