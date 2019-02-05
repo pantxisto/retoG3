@@ -1,0 +1,118 @@
+[33m5fdb97b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m https://github.com/grupo-G3/pruebas.git
+[33m5abeeb2[m Destrucción general
+[33m5a68beb[m commit mar feb  5 12:33:07 CET 2019
+[33md37adb1[m julen
+[33mde44d5b[m https://github.com/pantxisto/retoG3.git
+[33me629bc0[m vista de perfil
+[33m404f296[m https://github.com/pantxisto/retoG3.git
+[33ma048479[m https://github.com/pantxisto/retoG3.git
+[33me49f312[m scrollOfertas-Unai
+[33m8081d45[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33maebce09[m uso de el nuevo modelo users
+[33m6c625f2[m eventoVue-Filtros
+[33m92e5631[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33mae3048f[m control de usuarios terminado a falta de cambiar el modelo de usuario
+[33m7f805b8[m FiltrosVue 28-01-2019
+[33meea7cf4[m 28-01-2019 Unai
+[33m158ae94[m sendMail implementado
+[33mcaa73b1[m sendmail incluido
+[33m2b893ae[m header arreglado
+[33m3bbca85[m Empresas subida
+[33me5c2d57[m Parte empresas diseñada
+[33m940e975[m Administrar
+[33m9f2acd6[m recuperar contraseña empezado
+[33m5c83c22[m ofertas funcionando, queda la funcionalidad del botón detalles
+[33m27b7608[m login personalizado con merge
+[33m7912dac[m login personalizado
+[33m6550d15[m 22-01-2019 Unai
+[33m89f813a[m partial ofertas
+[33maba7ef6[m partial ofertas
+[33m81f625b[m navegacion en el menú incorporada
+[33md352a30[m merge hecho
+[33m2fee85b[m Añadido botón de deslogueo y control de usuarios básico
+[33m49a29a7[m prueba maquetacion
+[33m4d60da2[m config PDO Laravel
+[33m34020db[m varios
+[33m7c3c8a1[m guaperas
+[33mb3ad77c[m Delete .env
+[33mbe80c12[m commit jue ene 17 11:47:52 CET 2019
+[33m75a6e96[m Borrada carpeta retoG3
+[33md646b46[m Borrado retoG3 y creado .env-example
+[33mc4a0914[m Rutas arregladas
+[33m2d8de30[m Andoni tio bueno
+[33m1ad44fd[m arreglos varios
+[33mf196b60[m Creacion de datos mediantes seed
+[33m1cf6f0f[m Creacion de datos mediantes seed
+[33mcf5bb67[m Creacion de datos mediantes seed
+[33mf2847db[m creacion de controllers, models
+[33m3cb554f[m Redefinidos las migraciones y creados los modelos
+[33m35845c3[m Redefinidos las migraciones y creados los modelos
+[33m776a1ad[m .env del desgraciado de andrade
+[33m59f4d35[m Migraciones definidas y creadas
+[33me0a9939[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33mafb68b8[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33m492a2cb[m login separado de index
+[33m6f041ca[m migraciones definidas
+[33mb5f4031[m 14-01-19 Andrade
+[33m5b10fc8[m 12-02-19 Definicion de las columnas de las tablas mediante migraciones
+[33me53299c[m Definicion y creacion de Migraciones
+[33mbcb64c2[m Definicion y creacion de Migraciones
+[33mb95ea18[m commit vie ene 11 10:41:00 CET 2019
+[33m414a5ee[m env
+[33m73dcd0c[m 09-01-19 plantilla
+[33m863e73f[m 09-01-19 plantilla
+[33m3cdc867[m 09-01-19 plantilla
+[33ma7b3f1f[m 09-01-19 plantilla
+[33mf6550b6[m 09-01-19 plantilla
+[33m5be5d0f[m 08-01-19 plantilla
+[33m010075e[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33m37d7acf[m commit mar ene  8 12:06:10 CET 2019
+[33m0bf2f57[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33m474ad29[m commit mar ene  8 12:01:38 CET 2019
+[33m5bede69[m commit mar ene  8 12:00:27 CET 2019
+[33mb818c57[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33m553d2ac[m Merge branch 'master' of https://github.com/pantxisto/retoG3
+[33m5c4562b[m 08-01-19 plantilla
+[33m91b461b[m commit mar ene  8 10:58:34 CET 2019
+[33m5c60bfc[m commit mar ene  8 10:56:50 CET 2019
+[33m38739cc[m commit mar ene  8 10:55:57 CET 2019
+[33m5ec9d39[m commit mar ene  8 10:55:25 CET 2019
+[33mc961143[m commit mar ene  8 10:54:28 CET 2019
+[33ma54b37d[m commit mar ene  8 10:54:14 CET 2019
+[33m7111bdf[m commit mar ene  8 10:53:52 CET 2019
+[33mfe6cd2a[m commit mar ene  8 10:53:39 CET 2019
+[33md800dad[m commit mar ene  8 10:53:06 CET 2019
+[33m50fd08d[m commit mar ene  8 10:51:40 CET 2019
+[33me6e22e7[m commit mar ene  8 10:49:40 CET 2019
+[33m5a7ad86[m commit mar ene  8 10:48:14 CET 2019
+[33mee434c0[m commit mar ene  8 10:47:42 CET 2019
+[33mb49ca75[m commit mar ene  8 10:46:00 CET 2019
+[33m575a67b[m commit mar ene  8 10:45:37 CET 2019
+[33m5f8fa08[m commit mar ene  8 10:45:06 CET 2019
+[33me6c1e3d[m commit mar ene  8 10:42:57 CET 2019
+[33m0451001[m commit mar ene  8 10:42:30 CET 2019
+[33m0f2fd22[m commit mar ene  8 10:39:56 CET 2019
+[33m18f15dc[m commit mar ene  8 10:36:29 CET 2019
+[33mcf160cb[m commit mar ene  8 10:34:56 CET 2019
+[33m183d8e5[m commit mar ene  8 10:34:34 CET 2019
+[33m7f18a88[m commit mar ene  8 10:34:16 CET 2019
+[33mc1e25dc[m commit mar ene  8 10:33:56 CET 2019
+[33mc8cdacb[m commit mar ene  8 10:33:22 CET 2019
+[33m754ac29[m commit mar ene  8 10:31:41 CET 2019
+[33md1fe3cb[m commit mar ene  8 10:31:19 CET 2019
+[33m00f2cb7[m commit mar ene  8 10:29:18 CET 2019
+[33mb5bdcef[m commit mar ene  8 10:29:03 CET 2019
+[33ma2e3818[m commit mar ene  8 10:27:46 CET 2019
+[33m6f68aa9[m commit mar ene  8 10:26:19 CET 2019
+[33m8249efb[m commit mar ene  8 10:25:58 CET 2019
+[33m5b4689a[m commit mar ene  8 10:02:45 CET 2019
+[33m1356ceb[m commit mar ene  8 10:02:17 CET 2019
+[33mfa99145[m commit mar ene  8 10:01:52 CET 2019
+[33mb95e90c[m commit mar ene  8 10:01:33 CET 2019
+[33m9128da3[m commit mar ene  8 10:00:45 CET 2019
+[33m0aafcc3[m commit mar ene  8 09:51:48 CET 2019
+[33m5947a8b[m commit mar ene  8 09:50:37 CET 2019
+[33mb24cfe6[m commit mar ene  8 09:46:52 CET 2019
+[33m0a1adcd[m commit mar ene  8 09:43:36 CET 2019
+[33mc2d67fb[m commit mar ene  8 09:39:33 CET 2019
+[33mec58c3f[m first commit

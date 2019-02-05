@@ -1,0 +1,282 @@
+[33mcommit 5fdb97b975023d0fbca5548fcd9d2f53e03a5966[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: julen lodeiro <julenlodeiro@outlook.com>
+Date:   Tue Feb 5 16:45:47 2019 +0100
+
+    https://github.com/grupo-G3/pruebas.git
+
+[33mcommit 5abeeb27a289078acda01d198cd9d38f056aa844[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Tue Feb 5 14:16:35 2019 +0100
+
+    Destrucción general
+
+[33mcommit 5a68beb888d4263d36aadcf94bc3126d5f7e9ad8[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Tue Feb 5 12:33:07 2019 +0100
+
+    commit mar feb  5 12:33:07 CET 2019
+
+[33mcommit d37adb19e2039503c50fd80178368e6060284182[m
+Merge: de44d5b e629bc0
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 31 13:06:04 2019 +0100
+
+    julen
+
+[33mcommit de44d5bd0aec67fef3eb4205de6f4e59f00e9e14[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 31 12:59:06 2019 +0100
+
+    https://github.com/pantxisto/retoG3.git
+
+[33mcommit e629bc06f6c52680b7a48cc6313e1f30ef113d57[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Thu Jan 31 12:32:21 2019 +0100
+
+    vista de perfil
+
+[33mcommit 404f296694f74daaa58d95701b51bf5b07832fde[m
+Merge: a048479 e49f312
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 31 09:44:11 2019 +0100
+
+    https://github.com/pantxisto/retoG3.git
+
+[33mcommit a048479a4c8da556e7b507a2b49bb40839a242f8[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 31 09:43:47 2019 +0100
+
+    https://github.com/pantxisto/retoG3.git
+
+[33mcommit e49f312e58d344b112f73dba6b9b044bb1ca1538[m
+Author: 1INav <ander.itza@txorierri.com>
+Date:   Wed Jan 30 10:41:34 2019 +0100
+
+    scrollOfertas-Unai
+
+[33mcommit 8081d457585cfe731dd4618ee00b42782a95e88e[m
+Merge: aebce09 6c625f2
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Tue Jan 29 12:29:18 2019 +0100
+
+    Merge branch 'master' of https://github.com/pantxisto/retoG3
+    
+    porquer si
+
+[33mcommit aebce09cfec5ec3acaa44a0add9c3aa82989f59f[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Tue Jan 29 12:28:56 2019 +0100
+
+    uso de el nuevo modelo users
+
+[33mcommit 6c625f27bb89c7007241bf375a5e8dde1dc3ecfd[m
+Author: 1INav <ander.itza@txorierri.com>
+Date:   Tue Jan 29 12:10:31 2019 +0100
+
+    eventoVue-Filtros
+
+[33mcommit 92e56313b57f6448e442cfa555bd3e4dc192569b[m
+Merge: ae3048f 7f805b8
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Tue Jan 29 10:54:13 2019 +0100
+
+    Merge branch 'master' of https://github.com/pantxisto/retoG3
+    
+    porque si
+
+[33mcommit ae3048f7b9446f85e92a4ec219c6ba94641bf9e1[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Tue Jan 29 10:53:52 2019 +0100
+
+    control de usuarios terminado a falta de cambiar el modelo de usuario
+
+[33mcommit 7f805b8dbe586d76eee832679af3897fcb41b2ce[m
+Author: 1INav <navaskasa@gmail.com>
+Date:   Mon Jan 28 20:18:29 2019 +0100
+
+    FiltrosVue 28-01-2019
+
+[33mcommit eea7cf490dd170811ab490aaa9221af097c30fbb[m
+Author: 1INav <ander.itza@txorierri.com>
+Date:   Mon Jan 28 13:54:28 2019 +0100
+
+    28-01-2019 Unai
+
+[33mcommit 158ae9413af3c13a1da9ac65804dabd7bbd73a7c[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Mon Jan 28 12:14:41 2019 +0100
+
+    sendMail implementado
+
+[33mcommit caa73b16acc79b57987e6985294fe0ed97996618[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Fri Jan 25 15:25:36 2019 +0100
+
+    sendmail incluido
+
+[33mcommit 2b893ae690253a5b3fd81aecca30449971690619[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Fri Jan 25 12:54:06 2019 +0100
+
+    header arreglado
+
+[33mcommit 3bbca851c4fa6bac9e7548c5141422c4cc33c174[m
+Merge: e5c2d57 940e975
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 24 13:16:39 2019 +0100
+
+    Empresas subida
+
+[33mcommit e5c2d57a76ffe91ee0401b9061561b6565740458[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 24 13:13:07 2019 +0100
+
+    Parte empresas diseñada
+
+[33mcommit 940e975e8ce8fa58047beebd8b91e715c64145e6[m
+Author: j0s3.90jr@gmail.com <jonandonicastelo@outlook.com>
+Date:   Thu Jan 24 12:07:54 2019 +0100
+
+    Administrar
+
+[33mcommit 9f2acd6bfaf331a47702ba1185b0d224eeacee79[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Wed Jan 23 12:00:16 2019 +0100
+
+    recuperar contraseña empezado
+
+[33mcommit 5c83c223150c80286b1ae9e4ae01136205fd8116[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Wed Jan 23 10:03:13 2019 +0100
+
+    ofertas funcionando, queda la funcionalidad del botón detalles
+
+[33mcommit 27b760845e1fee58681915b20bbda5e48730e0d1[m
+Merge: 7912dac 6550d15
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Wed Jan 23 09:32:19 2019 +0100
+
+    login personalizado con merge
+
+[33mcommit 7912dac542f350c255c28581cbfe04aa530bfa6a[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Wed Jan 23 09:25:08 2019 +0100
+
+    login personalizado
+
+[33mcommit 6550d154b3ba8a1365edb81e11df9460746d3849[m
+Author: 1INav <ander.itza@txorierri.com>
+Date:   Tue Jan 22 13:30:12 2019 +0100
+
+    22-01-2019 Unai
+
+[33mcommit 89f813aba90427837550e492a1c8e0f4b8bf0773[m
+Author: j0s3.90jr@gmail.com <jonandonicastelo@outlook.com>
+Date:   Mon Jan 21 13:24:08 2019 +0100
+
+    partial ofertas
+
+[33mcommit aba7ef6535675eb719d8450796c7dd03c93b2e17[m
+Author: j0s3.90jr@gmail.com <jonandonicastelo@outlook.com>
+Date:   Mon Jan 21 12:24:54 2019 +0100
+
+    partial ofertas
+
+[33mcommit 81f625bb917ba845a9a02b1d2fe5744ef112bad7[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Fri Jan 18 14:12:06 2019 +0100
+
+    navegacion en el menú incorporada
+
+[33mcommit d352a30565f14f6c700725016ea2cd1574ccd468[m
+Merge: 2fee85b 49a29a7
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Fri Jan 18 13:53:29 2019 +0100
+
+    merge hecho
+
+[33mcommit 2fee85babcd1d38a2a7153c4a9d53c8fabad3180[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Fri Jan 18 13:52:05 2019 +0100
+
+    Añadido botón de deslogueo y control de usuarios básico
+
+[33mcommit 49a29a70761e8e1b9b29f30c7f4faa87d41a115f[m
+Author: j0tace <j0s3.90jr@gmail.com>
+Date:   Fri Jan 18 08:39:59 2019 +0100
+
+    prueba maquetacion
+
+[33mcommit 4d60da215bd9bd077259d12205fdbc48338bc842[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 17 12:31:35 2019 +0100
+
+    config PDO Laravel
+
+[33mcommit 34020db4b133915900e5bee49baae4be56521300[m
+Merge: 7c3c8a1 b3ad77c
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 17 11:44:09 2019 +0100
+
+    varios
+
+[33mcommit 7c3c8a12b2c376e3107e40fe193b6c04ddcc3b77[m
+Merge: 2d8de30 c4a0914
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 17 11:41:19 2019 +0100
+
+    guaperas
+
+[33mcommit b3ad77cb0aab667ff631aac45cc2d247882ccddf[m
+Author: j0tac3 <43231798+j0tac3@users.noreply.github.com>
+Date:   Thu Jan 17 11:40:48 2019 +0100
+
+    Delete .env
+
+[33mcommit be80c1293371120396f9b531e3144f745922f9ee[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Thu Jan 17 11:47:52 2019 +0100
+
+    commit jue ene 17 11:47:52 CET 2019
+
+[33mcommit 75a6e96b672f05d6837ffd798f2f301aba7881e6[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Thu Jan 17 11:37:49 2019 +0100
+
+    Borrada carpeta retoG3
+
+[33mcommit d646b46a57c1bf5594635324d71542f100a8e182[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Thu Jan 17 11:36:51 2019 +0100
+
+    Borrado retoG3 y creado .env-example
+
+[33mcommit c4a0914650f6c36f2ec6386820f21cf036957cac[m
+Author: pantxisto <jonandonicastelo@outlook.com>
+Date:   Thu Jan 17 11:16:46 2019 +0100
+
+    Rutas arregladas
+
+[33mcommit 2d8de3093ddba4148793f765bba231bb8f827c2a[m
+Author: Guaperas <julenlodeiro@outlook.com>
+Date:   Thu Jan 17 10:31:18 2019 +0100
+
+    Andoni tio bueno
+
+[33mcommit 1ad44fd2666e9317565534007c0e2161a982ac0b[m
+Author: j0tace <j0s3.90jr@gmail.com>
+Date:   Thu Jan 17 08:28:18 2019 +0100
+
+    arreglos varios
+
+[33mcommit f196b6098bbb9fadafc8dd90448ad60db5e70c26[m
+Author: j0tace <j0s3.90jr@gmail.com>
+Date:   Wed Jan 16 12:52:10 2019 +0100
+
+    Creacion de datos mediantes seed
+
+[33mcommit 1cf6f0f6c02ab7d649c55a774d2357d3eece1c65[m
+Author: j0tace <j0s3.90jr@gmail.com>
+Date:   Wed Jan 16 09:41:32 2019 +0100
+
+    Creacion
