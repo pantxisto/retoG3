@@ -9,49 +9,34 @@
         <div class="form-group row">
                 <label for="name">{{ __('Nombre') }}</label><br>
                 <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" name="name" id="name" value="{{ $usuarioActual->name }}" required autofocus>
-                @if ($errors->has('name'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('name') }}</strong>
-                    </span>
-                @endif
             </div>
 
             <div class="form-group row">
                 <label for="surname">{{ __('Apellidos') }}</label><br>
                 <input class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" type="text" id="surname" name="surname" value="{{ $usuarioActual->surname }}">
-                @if ($errors->has('surname'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('surname') }}</strong>
-                    </span>
-                @endif
             </div>
 
             <div class="form-group row">
                 <label for="email">{{ __('Email') }}</label><br>
                 <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" id="email" name="email" value="{{ $usuarioActual->email }}" required>
-                @if ($errors->has('email'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif
             </div>
 
             <div class="form-group row">
                 <label for="password">{{ __('Nueva Contraseña  (No obligatorio)') }}</label><br>
                 <input class="form-control{{ $errors->has('newPassword') ? ' is-invalid' : '' }}" type="password" id="password" name="password"><br><br>
-                @if ($errors->has('newPassword'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('newPassword') }}</strong>
-                    </span>
-                @endif
             </div>
 
-            <a href="{{ route('downloadFile', ['id' => $id]) }}">Descargar CV actual</a>
+            @if($usuarioActual->rol === 0)
+            @if($usuarioActual->filename !== null)
+                <a href="{{ route('downloadFile', ['id' => $id]) }}">Descargar CV actual</a>
+            @endif
             <div class="form-group row custom-file">
                 <input type="file" class="custom-file-input" id="cv" name="cv" aria-describedby="inputGroupFileAddon01">
                 <label class="custom-file-label" for="cv">{{ __('Curriculum Vitae') }}</label><br><br>
             </div>
+            @endif
 
+            @if($usuarioActual->rol === 1 || $usuarioActual->rol === 2)
             <div class="form-group row">
                 <label for="nomDepart">{{ __('Nombre de Departamento') }}</label><br>
                 <select  class="form-control{{ $errors->has('idDepart') ? ' is-invalid' : '' }}" id="idDepart" name="idDepart" required>                    
@@ -63,12 +48,8 @@
                     @endif
                 @endforeach              
                 </select>
-                @if ($errors->has('idDepart'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('idDepart') }}</strong>
-                    </span>
-                @endif
             </div>
+            @endif
             
             <div class="form-group row mb-0 justify-content-center">
                 <button type="submit" class="btn btn-primary">
