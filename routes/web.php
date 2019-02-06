@@ -40,6 +40,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 // Ruta de Unai
 // Route::get('/index', 'OfertasController@index');
 
+// Ruta para descargar el CV
+Route::get('/download/{id}' , 'PerfilController@downloadFile')->name('downloadFile');
 
 //Rutas y vistas que no hay que modificar
 
@@ -72,9 +74,8 @@ Route::group(['middleware' => 'auth'], function() {
         return view('empresas');
     });
     Route::get('/perfil', 'PerfilController@index')->name('perfil.get');
-    Route::post('/perfil/{id}', 'PerfilController@update')->name('perfil.post');
+    Route::post('/perfil/{id}', 'PerfilController@store')->name('perfil.post');
     Route::post('/email', 'EmailsController@insert')->name('email.post');
-
 
 });
 

@@ -20,9 +20,11 @@ class CrearTablaUsers extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->binary('cv')->nullable($value = true);
+            $table->string('mime')->nullable($value = true);
+            $table->string('original_filename')->nullable($value = true);
+            $table->string('filename')->nullable($value = true);
             $table->integer('idDepart')->nullable($value = true);
-            $table->integer('rol')->nullable($value = true);
+            $table->integer('rol')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
