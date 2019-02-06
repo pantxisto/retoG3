@@ -1,6 +1,7 @@
 <div class="col-sm-8">
     	<h3 class='text-center'>Nombre Tabla</h3>
     <div class="row">
+		if ()
     	<table class="table table-striped table-bordered">
     		<thead class='thead-light'>
     			<th scope="col">#</th>

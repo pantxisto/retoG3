@@ -52,11 +52,35 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/administrar', 'AdministrarController@index')->name('administrar');
 
+    Route::get('/empresas', 'EmpresasController@index')->name('empresas');
+
+
+/*
+    Route::get('/ofertas', function () {
+        return view('ofertas');
+    })->name('ofertas');*/
+    /*
+    Route::get('/empresas', function () {
+        return view('empresas');
+    });*/
+    Route::get('/perfil', function () {
+        return view('perfil');
+    })->name('perfil');
+    /*
+    Route::get('/administrar', function () {
+        return view('administrar');
+    })->name('administrar');*/
     Route::get('/empresas', function () {
         return view('empresas');
     });
     Route::get('/perfil', 'PerfilController@index')->name('perfil.get');
+<<<<<<< HEAD
     Route::post('/perfil/{id}', 'PerfilController@store')->name('perfil.post');
+=======
+    Route::post('/perfil/{id}', 'PerfilController@update')->name('perfil.post');
+    Route::post('/email', 'EmailsController@insert')->name('email.post');
+
+>>>>>>> 75ed877e27df00c265aaafcfe1a197a752271d93
 
 });
 
