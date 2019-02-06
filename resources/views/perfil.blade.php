@@ -23,7 +23,8 @@
 
             <div class="form-group row">
                 <label for="password">{{ __('Nueva Contraseña  (No obligatorio)') }}</label><br>
-                <input class="form-control{{ $errors->has('newPassword') ? ' is-invalid' : '' }}" type="password" id="password" name="password"><br><br>
+                <input class="form-control{{ $errors->has('newPassword') ? ' is-invalid' : '' }}" type="password" id="password" name="password"><br><br> 
+                <p class=" alert-danger" id="errorValidacion"></p>
             </div>
 
             @if($usuarioActual->rol === 0)
@@ -46,7 +47,7 @@
                     @else
                         <option value="{{ $departamento->idDepart }}">{{ $departamento->nomDepart }}</option>  
                     @endif
-                @endforeach              
+                @endforeach               
                 </select>
             </div>
             @endif

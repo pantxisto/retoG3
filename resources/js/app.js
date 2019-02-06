@@ -96,3 +96,59 @@ var filtroEmpresa = new Vue({
     },
     
 }) ;
+
+
+$(document).ready(function() {
+    //Validaciones
+     $("#name").focusout(function(){
+        var elementoContenido = $(this).val();
+        var expNom = /[a-zA-Z]{2,25}/;
+        if(elementoContenido.length == 0 || !expNom.test(elementoContenido)) {
+            $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Nombre este bien escrito.");
+            $(this).css('border', ' solid red');
+        }  else{
+            $(this).css('border', ' solid green');
+            $("#errorValidacion").html("");
+        }
+     })
+
+     $("#surname").focusout(function(){
+        var elementoContenido = $(this).val();
+        var expApe = /[a-zA-Z]{4,65}/;
+        if(elementoContenido.length == 0 || !expApe.test(elementoContenido)) {
+            $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Apellidos este bien escrito.");
+            $(this).css('border', ' solid red');
+        }else{
+            $(this).css('border', ' solid green');
+            $("#errorValidacion").html();
+        }
+     })
+
+    $("#email").focusout(function (){
+        var elementoContenido = $(this).val();
+        var expCor = /\S+@\S+\.\S+/;
+        // .test() compara una cadena(El valor del correo) con una expresion regular.
+        if(!expCor.test(elementoContenido)) {
+            $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Correo este bien escrito");
+            $(this).css('border', ' solid red');
+        }else{
+            $(this).css('border', ' solid green');
+            $("#errorValidacion").html();
+        }
+    })
+
+    $("#password").focusout(function (){
+        var elementoContenido = $(this).val();
+        var expNom = /[a-zA-Z]{2,25}/;
+        if(!expNom.test(elementoContenido)) {
+            $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Pass este bien escrito.");
+            $(this).css('border', ' solid orange');
+        }else{
+            $(this).css('border', ' solid green');
+            $("#errorValidacion").html();
+        }
+    })
+
+
+
+});  

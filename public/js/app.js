@@ -33576,7 +33576,7 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.7
+ * @version 1.14.6
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -34144,11 +34144,7 @@ function isFixed(element) {
   if (getStyleComputedProperty(element, 'position') === 'fixed') {
     return true;
   }
-  var parentNode = getParentNode(element);
-  if (!parentNode) {
-    return false;
-  }
-  return isFixed(parentNode);
+  return isFixed(getParentNode(element));
 }
 
 /**
@@ -34804,23 +34800,18 @@ function getRoundedOffsets(data, shouldRound) {
   var _data$offsets = data.offsets,
       popper = _data$offsets.popper,
       reference = _data$offsets.reference;
-  var round = Math.round,
-      floor = Math.floor;
 
+
+  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
+  var isVariation = data.placement.indexOf('-') !== -1;
+  var sameWidthOddness = reference.width % 2 === popper.width % 2;
+  var bothOddWidth = reference.width % 2 === 1 && popper.width % 2 === 1;
   var noRound = function noRound(v) {
     return v;
   };
 
-  var referenceWidth = round(reference.width);
-  var popperWidth = round(popper.width);
-
-  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
-  var isVariation = data.placement.indexOf('-') !== -1;
-  var sameWidthParity = referenceWidth % 2 === popperWidth % 2;
-  var bothOddWidth = referenceWidth % 2 === 1 && popperWidth % 2 === 1;
-
-  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthParity ? round : floor;
-  var verticalToInteger = !shouldRound ? noRound : round;
+  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthOddness ? Math.round : Math.floor;
+  var verticalToInteger = !shouldRound ? noRound : Math.round;
 
   return {
     left: horizontalToInteger(bothOddWidth && !isVariation && shouldRound ? popper.left - 1 : popper.left),
@@ -48041,6 +48032,57 @@ var filtroEmpresa = new Vue({
     mostrar: false
   }
 });
+$(document).ready(function () {
+  //Validaciones
+  $("#name").focusout(function () {
+    var elementoContenido = $(this).val();
+    var expNom = /[a-zA-Z]{2,25}/;
+
+    if (elementoContenido.length == 0 || !expNom.test(elementoContenido)) {
+      $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Nombre este bien escrito.");
+      $(this).css('border', ' solid red');
+    } else {
+      $(this).css('border', ' solid green');
+      $("#errorValidacion").html("");
+    }
+  });
+  $("#surname").focusout(function () {
+    var elementoContenido = $(this).val();
+    var expApe = /[a-zA-Z]{4,65}/;
+
+    if (elementoContenido.length == 0 || !expApe.test(elementoContenido)) {
+      $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Apellidos este bien escrito.");
+      $(this).css('border', ' solid red');
+    } else {
+      $(this).css('border', ' solid green');
+      $("#errorValidacion").html();
+    }
+  });
+  $("#email").focusout(function () {
+    var elementoContenido = $(this).val();
+    var expCor = /\S+@\S+\.\S+/; // .test() compara una cadena(El valor del correo) con una expresion regular.
+
+    if (!expCor.test(elementoContenido)) {
+      $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Correo este bien escrito");
+      $(this).css('border', ' solid red');
+    } else {
+      $(this).css('border', ' solid green');
+      $("#errorValidacion").html();
+    }
+  });
+  $("#password").focusout(function () {
+    var elementoContenido = $(this).val();
+    var expNom = /[a-zA-Z]{2,25}/;
+
+    if (!expNom.test(elementoContenido)) {
+      $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Pass este bien escrito.");
+      $(this).css('border', ' solid orange');
+    } else {
+      $(this).css('border', ' solid green');
+      $("#errorValidacion").html();
+    }
+  });
+});
 
 /***/ }),
 
@@ -48189,8 +48231,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/retoG3/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/retoG3/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\retoG3\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\retoG3\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
