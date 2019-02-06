@@ -12,7 +12,7 @@
 
 
         <!-- Button to trigger modal -->
-        <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#modalForm">
+        <button v-bind:title="infoContactos" id="infoContactos" class="btn btn-success btn-lg" data-toggle="modal" data-target="#modalForm">
             Contacto
         </button>
 
@@ -57,7 +57,7 @@
         </div>
 
         @if(Auth::user()!==null)
-            <button id='contacto' type='button' onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Desconectar</button>
+            <button id='contacto'  type='button' onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Desconectar</button>
         @endif
 
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

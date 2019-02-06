@@ -33,6 +33,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 var filtro = new Vue({
     el: '#filtro',
     data:{
+        mensajeFallo: 'Contenido en mantenimiento, disculpen las molestias',
         mensajeEmpresas: '',
         filtroFecha: [
             {fecha:'Mas Recientes'},
@@ -62,6 +63,7 @@ var filtro = new Vue({
         
     },
     methods: {
+        
         cambiarEstado: function() {
             this.mostrar = !this.mostrar;
             if(this.mostrar) {
@@ -96,6 +98,13 @@ var filtroEmpresa = new Vue({
     },
     
 }) ;
+
+new Vue({
+    el:'#infoContactos',
+    data: {
+        infoContactos: 'Si necesitas consultar algo no dudes.'
+    }
+})
 
 
 $(document).ready(function() {
@@ -142,13 +151,34 @@ $(document).ready(function() {
         var expNom = /[a-zA-Z]{2,25}/;
         if(!expNom.test(elementoContenido)) {
             $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Pass este bien escrito.");
-            $(this).css('border', ' solid orange');
+            $(this).css('border', ' solid red');
         }else{
             $(this).css('border', ' solid green');
             $("#errorValidacion").html();
         }
     })
+    //+DOM & Eventos
+    $('.botonOfertas').click(function(){
+        $(this).html("Volver a ver");
+    })
 
+    $('#contacto').mouseenter(function() {
+        $(this).css({
+            '-webkit-transform':'scale(1.3)',
+            '-moz-transform': 'scale(1.3)',
+            '-o-transform': 'scale(1.3)',
+            '-ms-transform': 'scale(1.3)'
+          });
+    })
 
-
+    $('#contacto').mouseleave(function() {
+        $(this).css({
+            '-webkit-transform':'scale(1.0)',
+            '-moz-transform': 'scale(1.0)',
+            '-o-transform': 'scale(1.0)',
+            '-ms-transform': 'scale(1.0)',
+            border: '50%'
+          });
+    })
+    
 });  

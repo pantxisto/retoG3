@@ -4,7 +4,7 @@
     <div class="contenido-ofertas">
 
             <div class="filtros">
-                <div id="filtro">
+                <div v-bind:title="mensajeFallo" id="filtro">
                 
                     <ul class = "list-unstyled">
                     <li><strong>Buscar Empresa: @{{mensajeEmpresas}} </strong></li>

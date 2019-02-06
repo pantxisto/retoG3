@@ -23,6 +23,7 @@
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
             @endif
+            <p class=" alert-danger" id="errorValidacion"></p>
         </div>
 
         <div class="form-group row">
