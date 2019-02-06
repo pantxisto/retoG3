@@ -70,9 +70,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/administrar', function () {
         return view('administrar');
     })->name('administrar');*/
+    /*
     Route::get('/empresas', function () {
         return view('empresas');
-    });
+    });*/
     Route::get('/perfil', 'PerfilController@index')->name('perfil.get');
     Route::post('/perfil/{id}', 'PerfilController@store')->name('perfil.post');
     Route::post('/email', 'EmailsController@insert')->name('email.post');
