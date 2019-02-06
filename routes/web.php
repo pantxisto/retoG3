@@ -74,13 +74,8 @@ Route::group(['middleware' => 'auth'], function() {
         return view('empresas');
     });
     Route::get('/perfil', 'PerfilController@index')->name('perfil.get');
-<<<<<<< HEAD
     Route::post('/perfil/{id}', 'PerfilController@store')->name('perfil.post');
-=======
-    Route::post('/perfil/{id}', 'PerfilController@update')->name('perfil.post');
     Route::post('/email', 'EmailsController@insert')->name('email.post');
-
->>>>>>> 75ed877e27df00c265aaafcfe1a197a752271d93
 
 });
 
