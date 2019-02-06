@@ -18,9 +18,11 @@
             @show
 
             @section('menu')
+            @if (Auth::user())
                 <div class="row justify-content-center m-5"> 
                     @include('partials.navbar')                    
                 </div>
+            @endif
             @show
 
             <div class="container">
