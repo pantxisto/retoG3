@@ -51,6 +51,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/ofertas', 'OfertasController@index')->name('ofertas');
 
     Route::get('/administrar', 'AdministrarController@index')->name('administrar');
+    //Route::resource('/administrar','AdministrarController');
+    Route::POST('add','AdministrarController@add');
+    Route::POST('edit','AdministrarController@edit');
+    Route::POST('delete','AdministrarController@delete');
 
     Route::get('/empresas', 'EmpresasController@index')->name('empresas');
 

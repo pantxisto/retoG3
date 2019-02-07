@@ -8,67 +8,50 @@ use App\Oferta;
 use App\User;
 use App\Empresa;
 
+use Validator;
+use Response;
+use Illuminate\Support\Facades\Input;
+
 use App\Departamento;
 use App\Grado;
 
 class AdministrarController extends Controller
 {
-    public function index(Request $request)
-    {
-    	$nomTabla = 'users';
-        //$table = Departamento::all();
-        $columns = Schema::getColumnListing($nomTabla);
-        //return view('administrar',['table'=>$table, 'columns'=>$columns]);
-        //if(!$request->ajax())return redirect('/');
-        $table = User::all();
-        //$columns = Schema::getColumnListing($nomTabla);
-        return view('administrar',['table'=>$table, 'columns'=>$columns]);
+    public function index(){
+        $depart = Departamento::paginate(10);
+        return view('administrar',compact('depart'));
+      }
+    
+      public function add(Request $request){
+        $rules = array(
+          'nombre' => 'required',
+          'siglas' => 'required',
+        );
+        $validator = Validator::make(Input::all(), $rules);
+      if ($validator->fails())
+      return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
+    
+      else {
+        $depart = new Departamento;
+        $depart->nomDepart = $request->nombre;
+        $depart->siglas = $request->siglas;
+ 
+        $depart->save();
+        return response()->json($depart);
+      }
     }
+    
+    public function edit(request $request){
+        $depart = Departamento::find ($request->id);
+        $depart->nomDepart = $request->nomDepart;
+        $depart->siglas = $request->siglas;
 
-    public function create()
-    {
-        return view('administrar');
+        $depart->save();
+        return response()->json($depart);
     }
-
-    public function store(Request $request)
-    {
-        $pastel = new Pastel;
-        $pastel->nombre = $request->input('nombre');
-        $pastel->sabor  = $request->input('sabor');
-
-        $pastel->save();
-
-        return redirect()->route('pasteles.index');
+    
+    public function delete(request $request){
+        $depart = Departamento::find($request->idDepart)->delete();
+        return response()->json();
     }
-
-    public function edit($id)
-    {
-        $pastel = Pastel::find($id);
-        return view('pasteles.edit')->with('pastel',$pastel);
-    }
-
-     public function update(Request $request, $id)
-    {
-        $pastel = Pastel::find($id);
-        $pastel->nombre = $request->input('nombre');
-        $pastel->sabor  = $request->input('sabor');
-        $pastel->save();
-        return redirect()->route('pasteles.index');
-    }
-
-     // Esta es la primer opcion
-    public function destroy($id)
-    {
-        $pastel = Pastel::find($id);
-        $pastel->delete();
-        return redirect()->route('pasteles.index');
-    }
-
-    // Esta es la segunda opcion
-    /*
-    public function destroy($id)
-    {
-        Pastel::destroy($id);
-        return redirect()->route('pasteles.index');
-    }*/
 }
