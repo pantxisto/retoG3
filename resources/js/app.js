@@ -145,18 +145,8 @@ $(document).ready(function() {
             $("#errorValidacion").html();
         }
     })
-
-    $("#password").focusout(function (){
-        var elementoContenido = $(this).val();
-        var expNom = /[a-zA-Z]{2,25}/;
-        if(!expNom.test(elementoContenido)) {
-            $("#errorValidacion").html("<strong>Error!</strong> Compruebe que el campo Pass este bien escrito.");
-            $(this).css('border', ' solid red');
-        }else{
-            $(this).css('border', ' solid green');
-            $("#errorValidacion").html();
-        }
-    })
+    $("#password").focusout(function (){ var elementoContenido = $(this).val(); var expCon = /^.{6,}$/; if(elementoContenido.length == 0 || !expCon.test(elementoContenido)) { $("#errorValidacion").html("Error! Compruebe que el campo Pass este bien escrito.(Se necesita 6 caracteres)"); $(this).css('border', ' solid red'); }else{ $(this).css('border', ' solid green'); $("#errorValidacion").html(""); } })
+    
     //+DOM & Eventos
     $('.botonOfertas').click(function(){
         $(this).html("Volver a ver");
