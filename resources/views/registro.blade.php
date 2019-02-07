@@ -40,6 +40,7 @@
         <div class="form-group row">
             <label for="password-confirm">{{ __('Confirma la contraseña') }}</label><br>
             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+            <p class=" alert-danger" id="errorValidacion"></p>
         </div>
 
         <div class="form-group row mb-0">
