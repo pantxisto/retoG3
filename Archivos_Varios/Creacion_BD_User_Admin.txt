@@ -1,3 +1,4 @@
 CREATE DATABASE BolsaTrabajo CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 GRANT ALL ON BolsaTrabajo.* TO 'Admin'@'localhost' IDENTIFIED BY 'Admin12345_';
 GRANT ALL PRIVILEGES ON *.* TO 'Admin'@'localhost' WITH GRANT OPTION;
+//Prueba
